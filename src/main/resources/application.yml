@@ -1,0 +1,39 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: notification-manager-service-api
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: silasbaracho@gmail.com
+    password: nelk wfhk qsos bzkk
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+  twilio:
+    account: AC998319d8f9c333e487c1fe54daf5cc5d
+    token: ca5d1d1f4399fc9c76c9c2f51d66f21f
+    phoneNumber: +12293035850
+  kafka:
+    bootstrap-servers: "127.0.0.1:9092"
+    topics:
+      notification-message-dispatcher: notification-message-dispatcher
+    listener:
+      ack-mode: manual
+    consumer:
+      group-id: notification-manager-service
+      enable-auto-commit: false
+      auto-offset-reset: earliest
+      key-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+      value-deserializer: "io.confluent.kafka.serializers.KafkaAvroDeserializer"
+      properties:
+        schema.registry.url: "http://127.0.0.1:8081"
+        specific.avro.reader: true
+        value.deserializer.specific.avro.reader: true
+    producer:
+      keySerializer: "org.apache.kafka.common.serialization.StringSerializer"
+      valueSerializer: "io.confluent.kafka.serializers.KafkaAvroSerializer"
+      properties:
+        schema.registry.url: "http://127.0.0.1:8081"
+        specific.avro.reader: true

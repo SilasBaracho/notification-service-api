@@ -1,0 +1,26 @@
+[
+  {
+    "type": "record",
+    "name": "NotificationAvro",
+    "namespace": "br.com.baracho.nm.infrastructure.config.kafka.avro",
+    "fields": [
+      {
+        "name": "notificationType",
+        "type": "string"
+      },
+      {
+        "name": "contactInfo",
+        "type": "string"
+      },
+      {
+        "name": "subject",
+        "type": ["null", "string"],
+        "default": null
+      },
+      {
+        "name": "message",
+        "type": "string"
+      }
+    ]
+  }
+]
