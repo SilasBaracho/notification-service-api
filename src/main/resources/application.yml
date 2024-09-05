@@ -6,15 +6,15 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: silasbaracho@gmail.com
-    password: nelk wfhk qsos bzkk
+    username: ""
+    password: ""
     properties:
       mail.smtp.auth: true
       mail.smtp.starttls.enable: true
   twilio:
-    account: AC998319d8f9c333e487c1fe54daf5cc5d
-    token: ca5d1d1f4399fc9c76c9c2f51d66f21f
-    phoneNumber: +12293035850
+    account: ""
+    token: ""
+    phoneNumber: ""
   kafka:
     bootstrap-servers: "127.0.0.1:9092"
     topics:
