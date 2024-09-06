@@ -2,7 +2,7 @@
 
 ## Descrição
 
-**Notification Manager API** é um serviço responsável pelo envio de notificações via EMAIL ou SMS. O serviço é capaz de enviar notificações utilizando diferentes provedores, garantindo a entrega de mensagens para os destinatários via email ou SMS, dependendo da necessidade do sistema.
+**Notification Manager API** é um serviço responsável pelo envio de notificações via EMAIL ou SMS. O serviço é capaz de enviar notificações utilizando diferentes provedores, garantindo a entrega de mensagens para os destinatários via email ou SMS.
 
 ## Funcionalidades
 
@@ -11,11 +11,10 @@
 - Integração com provedores de email e SMS.
 - Suporte a diferentes formatos de templates (HTML e texto).
 - Suporte a eventos assíncronos para disparo de notificações.
-- Gerenciamento de logs de envio e erros.
 
 ## Tecnologias Utilizadas
 
-- **Java 17**
+- **Java 21**
 - **Spring Boot**
 - **Kafka** - Para publicação e consumo de eventos de notificação.
 - **Schema Registry** - Para gerenciamento de esquemas de mensagens.
@@ -27,7 +26,7 @@
 
 ## Requisitos
 
-- **Java 17**
+- **Java 21**
 - **Kafka**
 - **Schema Registry**
 - **Twilio Account** (para envio de SMS)
@@ -38,7 +37,7 @@
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/notification-manager-api.git
+   git clone https://github.com/SilasBaracho/notification-manager-api.git
 
 2. Configure o envio de email:
 
@@ -68,7 +67,7 @@ A API oferece um endpoint REST para o envio de notificações.
    -H "Content-Type: application/json" \
    -d '{
      "notificationType": "EMAIL",
-     "contactInfo": "destinatario@example.com",
+     "contactInfo": "destinatario@example.com / 8100055052235",
      "subject": "Assunto do Email",
      "message": "Conteúdo do Email"
    }'
